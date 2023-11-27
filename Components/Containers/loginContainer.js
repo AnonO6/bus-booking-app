@@ -116,7 +116,6 @@ const styles = StyleSheet.create({
     maxWidth: '60%',
     maxHeight: 'auto',
     marginTop: 10,
-    marginBottom: 0,
   },
   contentArea: {
     backgroundColor: GlobalBackgroundColors.ternaryColor,
