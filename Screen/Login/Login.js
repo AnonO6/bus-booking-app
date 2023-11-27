@@ -69,6 +69,7 @@ function Login({route, navigation}, props) {
           title="BUS BOOKING
           SYSTEM"
           leftBottomText="Dont have account?"
+          leftBottomLink={() => navigation.navigate('Operator', {persons})}
           rightBottomText="Register Here"
           rightBottomLink={() =>
             navigation.navigate('LoginRegister', {persons})

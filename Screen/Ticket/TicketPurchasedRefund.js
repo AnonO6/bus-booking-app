@@ -25,7 +25,9 @@ import {GlobalBackgroundColors, primaryButton} from '../../Styles/global';
 function TicketPurchasedRefund({navigation, route}) {
   console.log(route.params);
   // Function goes here
-  const key = route.params.person.PhoneNumber; //Temporarly, will encrypt later
+  const key1 = route.params.person.PhoneNumber; //Temporarly, will encrypt later
+  const key2 = route.params.Bus.Booked[0].seatID;
+  console.log(key2);
   const purchaseDone = () => {
     setModalVisible(false);
     navigation.navigate('HomeScreen');
@@ -46,7 +48,7 @@ function TicketPurchasedRefund({navigation, route}) {
         <QRCode
           size={370}
           style={{marginTop: 32, paddingHorizontal: 24}}
-          value={key}
+          value={key1 + key2}
         />
       </View>
       <View style={{paddingBottom: 50}}></View>
