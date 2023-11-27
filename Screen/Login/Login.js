@@ -66,7 +66,8 @@ function Login({route, navigation}, props) {
     <View style={{flex: 1}}>
       {promise ? (
         <LoginContainer
-          title="Login"
+          title="BUS BOOKING
+          SYSTEM"
           leftBottomText="Dont have account?"
           rightBottomText="Register Here"
           rightBottomLink={() =>
