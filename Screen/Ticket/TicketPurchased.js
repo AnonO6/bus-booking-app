@@ -90,12 +90,14 @@ function Ticket(props) {
         }>
         <Text
           style={{
+            position: 'absolute',
+            top: 0,
             color: 'white',
             textAlign: 'center',
-            marginTop: 15,
-            marginBottom: 10,
+            marginTop: 6,
+            marginLeft: 20,
           }}>
-          Refund
+          SHOW QR CODE
         </Text>
       </TouchableOpacity>
     </View>

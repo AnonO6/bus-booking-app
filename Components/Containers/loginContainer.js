@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   stretch: {
     maxWidth: '60%',
-    maxHeight: 'auto',
+    maxHeight: '50%',
     marginTop: 10,
   },
   contentArea: {
