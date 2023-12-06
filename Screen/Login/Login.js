@@ -68,8 +68,8 @@ function Login({route, navigation}, props) {
         <LoginContainer
           title="BUS BOOKING
           SYSTEM"
-          leftBottomText="Dont have account?"
-          leftBottomLink={() => navigation.navigate('Operator', {persons})}
+          leftBottomText="Operator login"
+          leftBottomLink={() => navigation.navigate('OperatorLogin', {persons})}
           rightBottomText="Register Here"
           rightBottomLink={() =>
             navigation.navigate('LoginRegister', {persons})

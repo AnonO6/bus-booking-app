@@ -14,6 +14,12 @@ import 'firebase/compat/firestore';
 import database from 'firebase/compat/database';
 import {firebaseConfig} from './config';
 
+////////////////////////////////////////////////////
+import {LogBox} from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
+////////////////////////////////////////////////////
+
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 } else {

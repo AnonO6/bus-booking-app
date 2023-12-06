@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 'auto',
     marginBottom: 'auto',
-    color: GlobalBackgroundTextColors.primaryColor,
+    color: GlobalBackgroundTextColors.secondaryColor,
   },
   linkBottom: {
     color: GlobalBackgroundColors.secondaryColor,
