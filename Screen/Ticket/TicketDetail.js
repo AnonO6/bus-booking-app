@@ -69,7 +69,7 @@ function TicketDetail({navigation, route}) {
   /*============================= My Data created ================================================== */
   var [promise, setPromise] = useState(true);
 
-  var GenderDetail = ['Male', 'Female'];
+  var FacultyDetail = ['YES', 'NO'];
   var amount = Bus.Price;
   var totalTicket = Bus.Pending.length;
   var totalamount = amount * totalTicket;
@@ -218,7 +218,7 @@ function TicketDetail({navigation, route}) {
                     justifyContent: 'space-between',
                   }}>
                   <Image
-                    style={{width: 40, height: 40}}
+                    style={{width: 40, height: 40, objectFit: 'contain'}}
                     source={require('../../assets/Images/log.png')}
                   />
                   <Image
@@ -352,7 +352,7 @@ function TicketDetail({navigation, route}) {
                     marginTop: 10,
                   }}>
                   <Text style={{fontSize: 15, color: 'black'}}>SeatNo</Text>
-                  <Text style={{fontSize: 15, color: 'black'}}>Gender</Text>
+                  <Text style={{fontSize: 15, color: 'black'}}>Faculty</Text>
                 </View>
                 <View>
                   {console.log(Bus.Pending)}
@@ -378,7 +378,7 @@ function TicketDetail({navigation, route}) {
                             fontSize: 10,
                             color: GlobalBackgroundTextColors.textBoxColor,
                           }}>
-                          {GenderDetail[item.Gender]}
+                          {FacultyDetail[item.Faculty]}
                         </Text>
                       </View>
                     )}

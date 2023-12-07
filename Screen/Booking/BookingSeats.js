@@ -275,11 +275,11 @@ function BookingSeats({navigation, route}) {
         found = true;
         if (seatColor == 2) {
           //If seat color is black
-          item.Gender = 0;
+          item.Faculty = 0;
           seatColorChange(0);
           return item;
         } else if (seatColor == 0) {
-          item.Gender = 1;
+          item.Faculty = 1;
           seatColorChange(1);
           return item;
         } else if (seatColor == 1) {
@@ -291,7 +291,7 @@ function BookingSeats({navigation, route}) {
     });
 
     if (found == false) {
-      selectedData.push({seatID, Gender: 0});
+      selectedData.push({seatID, Faculty: 0});
       seatColorChange(0);
     }
   };

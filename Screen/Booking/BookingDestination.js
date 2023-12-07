@@ -125,6 +125,8 @@ function DatePicker(props) {
           }}
           onValueChange={(itemValue, itemIndex) => {
             props.onPress(itemValue);
+
+            //setDateSchedule(itemValue);
           }}>
           {props.DateSchedule.map(item => (
             <Picker.Item label={item} value={item} />
@@ -147,7 +149,7 @@ function BookingDestination({navigation, route}) {
 
   var [DateSchedule1, setDateSchedule] = useState([]);
   var [cities1, setCities] = useState([]);
-  var [pendingBooking1, setPendingBooking] = useState([]);
+  var [pendingBooking1, setPendingBooking] = useState([]); //AVIRAL
 
   let [ArrivalTerminal, changeArrivalTerminal] = useState(''); // For searching bar
   let [ArrivalTerminalModal, ArrivalTerminalModalHandler] = useState(false); // For changing Model
@@ -187,7 +189,7 @@ function BookingDestination({navigation, route}) {
         citiesTemp = datasnap.val();
       })
       .then(readCountTxn => {
-        // When the propmise to get the city is made
+        // When the promise to get the city is made
         const BusScheduleNode = rootReference.child('BusSchedule');
         BusScheduleNode.once('value')
           .then(datasnap => {
@@ -287,6 +289,7 @@ function BookingDestination({navigation, route}) {
                   selected={DateData}
                   onPress={changeDateData}
                 />
+                {/* AVI */}
               </View>
               <TouchableOpacity
                 onPress={() =>

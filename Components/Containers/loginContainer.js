@@ -37,7 +37,7 @@ function LoginContainer(props) {
       <View style={styles.contentArea}>
         {/* Everything that is passed as child */}
         <View style={{flex: 1, alignItems: 'center'}}>
-          <View>
+          <View style={{marginBottom: 10}}>
             <Image
               style={styles.stretch}
               source={require('../../assets/Images/log.png')}
@@ -52,8 +52,8 @@ function LoginContainer(props) {
                 width: '70%',
                 padding: 10,
                 paddingLeft: 0,
-                marginTop: -100,
-                marginBottom: 10,
+                marginTop: -95,
+                marginBottom: 40,
               },
             ]}>
             <View style={{marginLeft: 'auto', marginRight: 'auto'}}>
@@ -90,7 +90,9 @@ function LoginContainer(props) {
             justifyContent: 'space-between',
             alignItems: 'flex-end',
           }}>
-          <Text style={styles.linkBottom}>{props.leftBottomText}</Text>
+          <TouchableOpacity activeOpacity={0.9} onPress={props.leftBottomLink}>
+            <Text style={[styles.linkBottom]}>{props.leftBottomText}</Text>
+          </TouchableOpacity>
           <TouchableOpacity activeOpacity={0.9} onPress={props.rightBottomLink}>
             <Text style={[styles.linkBottom]}>{props.rightBottomText}</Text>
           </TouchableOpacity>
@@ -113,9 +115,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   stretch: {
-    maxWidth: '60%',
+    maxWidth: '61%',
     maxHeight: '50%',
     marginTop: 10,
+    marginBottom: 3,
   },
   contentArea: {
     backgroundColor: GlobalBackgroundColors.ternaryColor,

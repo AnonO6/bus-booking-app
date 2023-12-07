@@ -255,10 +255,10 @@ function BookingBuses({navigation, route}) {
               Arrival={ArrivalSelected}
               Destination={DestinationSelected}></Header>
           }>
-          <Slider
+          {/* <Slider
             DateSchedule={DateSchedule1}
             Date={DateData}
-            DateHandler={DateHandler}></Slider>
+            DateHandler={DateHandler}></Slider> */}
           {show ? (
             <ScrollView>
               <FlatList
